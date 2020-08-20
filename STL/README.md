@@ -1,1 +1,1 @@
-[a link]http://www.cplusplus.com/reference/stl/
+[a relative link]http://www.cplusplus.com/reference/stl/
