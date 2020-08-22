@@ -27,7 +27,7 @@ int main(){
     for(int i = 0; i < n ; i++){
         int number;
         cin>>number;
-         a.push_back(number)
+         a.push_back(number);
     }
        
     return 0;
