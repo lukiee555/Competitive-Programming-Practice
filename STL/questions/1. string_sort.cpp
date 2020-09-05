@@ -46,21 +46,26 @@ void display(string arr[], int n)
     }
 }
 
-bool comparator(string s1, string s2)
+bool comparator(string a, string b)
 {
-    int flag = 1;
-    for (int i = 0; i < s2.length(); i++)
-    {
-        if (s2[i] != s1[i])
-        {
-            flag = 0;
-            break;
-        }
-    }
-    if (flag == 1)
-        return s1.length() > s2.length();
+    // int flag = 1;
+    // for (int i = 0; i < s2.length(); i++)
+    // {
+    //     if (s2[i] != s1[i])
+    //     {
+    //         flag = 0;
+    //         break;
+    //     }
+    // }
+    // if (flag == 1)
+    //     return s1.length() > s2.length();
 
-    return s1 < s2;
+    // return s1 < s2;
+    if(a.size() <= b.size() && b.substr(0,a.size()) == a)
+        return false;
+    else if (b.size() < a.size() && a.substr(0,b.size()) == b)
+        return true;
+    else return a < b;
 }
 
 int main()
