@@ -19,8 +19,8 @@ int power_optimised(int a, int n){
 }
 
 int main(){
-    int n;
-    cin>>n;
-    cout<<power_optimised(n);
+    int a,n;
+    cin>>a>>n;
+    cout<<power_optimised(a, n);
     return 0;
 }
