@@ -15,7 +15,7 @@ int main(){
     cin>>p;
     if(p == 1){
         cout<<"366";
-        return;
+        return 0;
     }
     while(x > 1-p){
         x = x*(num)/denom;
