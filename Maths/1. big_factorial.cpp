@@ -5,7 +5,7 @@ using namespace std;
 void multiply(int *a, int &n, int no){
     int carry = 0;
     for(int i = 0; i < n; i++){
-        int product = a[i]&no + carry;
+        int product = a[i]*no + carry;
         a[i] = product%10;
         carry = product / 10;
     }
@@ -22,7 +22,7 @@ void big_factorial(int n){
         a[i] = 0;
     int number_of_digit = 1;
     a[0] = 1;
-    for(int i = 2; i < n; i ++){
+    for(int i = 2; i <=n; i++){
         multiply(a,number_of_digit,i);
     }
     //print the number
