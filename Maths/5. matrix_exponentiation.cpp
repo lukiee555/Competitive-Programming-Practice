@@ -11,7 +11,7 @@ vector<ll> a, b, c;
 
 vector<vector<ll>> multiply(vector<vector<ll>> A, vector<vector<ll>> B){
     // logic to multiply matrices
-    vector<vector<ll>> C(k+1, vector<ll> (k + 1)) C;
+    vector<vector<ll>> C(k+1, vector<ll> (k + 1)) ;
 
     for(int i = 1; i <= k; i++ ){
         for(int j = 1; j <=k; j++){
@@ -32,7 +32,7 @@ vector<vector<ll>> pow(vector<vector<ll>> A, ll p){
         return multiply(A, pow(A, p - 1));
     }
     vector<vector<ll>> X = pow(A, p / 2);
-    return multipy(X,X);
+    return multiply(X,X);
 }
 
 ll compute(ll n)
