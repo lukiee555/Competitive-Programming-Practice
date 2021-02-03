@@ -1,3 +1,6 @@
+/*
+https://www.geeksforgeeks.org/find-maximum-sum-triplets-array-j-k-ai-aj-ak/
+*/
 int Solution::solve(vector<int> &A) {
     int n=A.size();
     vector v(n,0);
