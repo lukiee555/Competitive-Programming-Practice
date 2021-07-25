@@ -16,7 +16,9 @@ string Solution::solve(string A)
     A = "";
     while (!st.empty())
     {
-        A += st.top() + " ";
+        string t = st.top();
+        if (t != "")
+            A += st.top() + " ";
         st.pop();
     }
 
