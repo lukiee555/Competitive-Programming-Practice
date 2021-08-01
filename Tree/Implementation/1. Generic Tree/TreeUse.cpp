@@ -78,7 +78,7 @@ int heightOfTree(TreeNode<int>* root){
     }
     return 1 + maxHeightOfChildren;
 }
-void printAtLevelK(Treenode<int>* root, int k){
+void printAtLevelK(TreeNode<int>* root, int k){
     if(k == 0){
         cout<<root->data<<endl;
         return;
@@ -86,6 +86,28 @@ void printAtLevelK(Treenode<int>* root, int k){
     for(int i = 0; i < root->children.size(); i++){
         printAtLevelK(root->children[i], k-1);
     }
+}
+void preOrderTraversal(TreeNode<int>* root){
+    if(root == NULL)
+        return;
+    cout<<root->data<<" ";
+    for(int i = 0; i < root->children.size(); i++){
+        preOrderTraversal(root->children[i]);
+    }
+}
+void postOrderTraversal(TreeNode<int>* root){
+    if(root == NULL)
+        return;
+    for(int i = 0; i < root->children.size(); i++){
+        postOrderTraversal(root->children[i]);
+    }
+    cout<<root->data<<" ";
+}
+void deleteTree(TreeNode<int>* root){
+    for(int i = 0; i < root->children.size(); i++){
+        deleteTree(root->children[i]);
+    }
+    delete root;
 }
 int main(){
     // TreeNode<int>* root = new TreeNode<int>(1);
@@ -97,6 +119,11 @@ int main(){
     TreeNode<int>* root = buildTreeLevelWise();
     printTree(root);
     cout<<endl<<numNodes(root)<<endl;
+
     // TODO delete the tree
+    //Method-1
+    //deleteTree(root);
+    //Method-2 using destructor
+
     return 0;
 }
